@@ -9,7 +9,7 @@ rl.question("What is yout name: ", (name) => {
   rl.question("What is your contact: ", (number) => {
     rl.question("What is your email: ", (email) => {
       console.log(
-        `Your name is ${name},\nwith number: ${number}, \nyour email address: ${email}`
+        `\nYour name is ${name},\nwith number: ${number}, \nyour email address: ${email}`
       );
 
       rl.close();
