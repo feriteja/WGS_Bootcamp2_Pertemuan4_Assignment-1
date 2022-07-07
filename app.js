@@ -1,7 +1,12 @@
-const fs = require("fs");
+const readline = require("readline");
 
-fs.writeFileSync("test.txt", "Hello world, this is synchronous versi 2");
-fs.readFile("test.txt", "utf-8", (err, data) => {
-  if (err) throw err;
-  return console.log(data);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("What is yout name: ", (name) => {
+  console.log(`Thank you ${name}`);
+
+  rl.close();
 });
