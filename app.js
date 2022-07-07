@@ -6,7 +6,13 @@ const rl = readline.createInterface({
 });
 
 rl.question("What is yout name: ", (name) => {
-  console.log(`Thank you ${name}`);
+  rl.question("What is your contact", (number) => {
+    rl.question("What is your email", (email) => {
+      console.log(
+        `Your name is ${name},\nwith number: ${number}, \nyour email address: ${email}`
+      );
 
-  rl.close();
+      rl.close();
+    });
+  });
 });
